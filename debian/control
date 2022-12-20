@@ -1,0 +1,28 @@
+Source: libbareword-filehandles-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Florian Schlichting <fsfs@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 11~),
+               libb-hooks-op-check-perl,
+               libextutils-depends-perl,
+               perl
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libbareword-filehandles-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libbareword-filehandles-perl.git
+Homepage: https://metacpan.org/release/bareword-filehandles
+
+Package: libbareword-filehandles-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libb-hooks-op-check-perl
+Description: Perl pragma to disable bareword filehandles
+ bareword::filehandles lexically disables the use of bareword filehandles
+ with builtin functions, except for the special builtin filehandles
+ STDIN, STDOUT, STDERR, ARGV, ARGVOUT and DATA. To use it in your
+ scripts, simply say
+ .
+   no bareword::filehandles;
